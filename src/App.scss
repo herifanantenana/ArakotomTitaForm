@@ -1,0 +1,280 @@
+main {
+	margin: 16px 10%;
+	padding: 64px 5%;
+	background-color: #f5f7fb;
+	border-radius: 8px;
+	h1 {
+		font-size: 2.5rem;
+		font-weight: bold;
+		text-align: center;
+		color: #1a2043;
+		margin-block: 64px;
+	}
+}
+
+.btn--data {
+	text-align: center;
+	button {
+		border: none;
+		background-color: #5466d1;
+		color: #f5f7fb;
+		padding: 16px 24px;
+		font-size: 18px;
+		font-weight: 700;
+		border-radius: 4px;
+		cursor: pointer;
+		&:hover {
+			background-color: #4d5b9e;
+		}
+		&:disabled {
+			background-color: #a5a5a5;
+			cursor: not-allowed;
+		}
+	}
+}
+
+.step {
+	margin-block: 42px;
+	h2 {
+		font-size: 26px;
+		font-weight: 700;
+		margin-bottom: 16px;
+		color: #1a2043;
+	}
+	.list--step {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		padding: 0 32px;
+	}
+	.content--step {
+		padding: 0 32px;
+	}
+}
+
+.sub--step {
+	h3 {
+		font-size: 1.4rem;
+		font-weight: 700;
+		margin-bottom: 24px;
+		color: #1a2043;
+	}
+	div:last-child {
+		margin-bottom: 16px;
+	}
+}
+
+.form--choice {
+	h4 {
+		font-size: 1.2rem;
+		font-weight: 700;
+		margin-bottom: 8px;
+		color: #293264;
+	}
+	.list--choice {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 12px;
+		label {
+			display: block;
+			position: relative;
+			color: #1d244b;
+			padding: 12px 16px;
+			font-size: 1rem;
+			background-color: transparent;
+			text-align: center;
+			border-radius: 16px;
+			input {
+				display: none;
+			}
+			&.checked {
+				background-color: #d6dbf5;
+				font-weight: 600;
+				color: #1a2043;
+			}
+			&.unchecked {
+				color: #4054c4;
+			}
+		}
+	}
+}
+
+.form--field {
+	label {
+		display: block;
+		margin-bottom: 8px;
+		h4 {
+			font-size: 1.2rem;
+			font-weight: 700;
+			color: #293264;
+		}
+		p {
+			font-size: 0.95rem;
+			opacity: 0.85;
+		}
+	}
+	input {
+		padding: 0.8em 1em;
+		font-size: 1rem;
+		border-radius: 4px;
+		width: 100%;
+		border: 1px solid #cbcbce;
+		&:focus {
+			border-color: #1a2043;
+			outline: 2px solid #5466d1;
+		}
+	}
+}
+
+.form--area {
+	label {
+		display: block;
+		margin-bottom: 8px;
+		font-size: 1.2rem;
+		color: #1a2043;
+		font-weight: 700;
+	}
+	textarea {
+		resize: vertical;
+		scroll-snap-type: unset;
+		padding: 0.7em 0.9em;
+		line-height: 1.25em;
+		font-size: 1rem;
+		border-radius: 4px;
+		width: 100%;
+		border: 1px solid #cbcbce;
+		&:focus {
+			border-color: #1a2043;
+			outline: 2px solid #5466d1;
+		}
+	}
+	p {
+		font-size: 0.85rem;
+		opacity: 0.9;
+	}
+}
+
+.form--check {
+	h4 {
+		font-size: 1.2rem;
+		font-weight: 600;
+		margin-bottom: 8px;
+		color: #1a2043;
+	}
+	.list--option {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+
+		.check--box {
+			display: flex;
+			width: fit-content;
+			padding-left: 16px;
+			justify-content: start;
+			align-items: center;
+			gap: 6px;
+			&:hover {
+				input {
+					background-color: #a5a5a5;
+				}
+			}
+			input,
+			label {
+				color: #4054c4;
+				cursor: pointer;
+			}
+			input {
+				appearance: none;
+				--webkit-appearance: none;
+				height: 24px;
+				width: 24px;
+				background-color: #d6dbf5;
+				border-radius: 4px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				outline: none;
+				&::after {
+					font-family: "Font Awesome 6 Free";
+					content: "\f00c";
+					font-weight: 900;
+					font-size: 16px;
+					display: none;
+				}
+				&:checked {
+					background-color: #1a2043;
+					&::after {
+						color: #fff;
+						display: block;
+					}
+					& + label {
+						font-weight: 600;
+						color: #293264;
+					}
+				}
+			}
+		}
+	}
+}
+p.link--file {
+	font-style: italic;
+	a {
+		font-size: 1.2rem;
+	}
+}
+
+.form--table {
+	h4 {
+		font-size: 1.2rem;
+		font-weight: 600;
+		margin-bottom: 12px;
+		color: #1a2043;
+	}
+	table {
+		width: 95%;
+		border-collapse: collapse;
+		border-radius: 8px 8px 0 0;
+		overflow: hidden;
+		margin: 16px auto;
+		&.short--table {
+			thead tr th:nth-child(2) {
+				width: 25%;
+			}
+		}
+		thead tr {
+			background-color: #d6dbf5;
+			color: #1a2043;
+			width: 100%;
+			font-weight: 600;
+			text-align: left;
+			width: 25%;
+		}
+		th {
+			padding: 15px 15px;
+		}
+		tbody {
+			tr {
+				border-bottom: 1px solid #cbcbce;
+				&:last-child {
+					border-bottom: 2px solid #293264;
+				}
+			}
+			td {
+				text-align: center;
+				padding: 3px 0 6px 0;
+			}
+			input {
+				width: 95%;
+				padding: 8px 8px;
+				border: none;
+				font-size: 0.9rem;
+				background-color: transparent;
+				border-bottom: 1px solid transparent;
+				&:focus {
+					outline: none;
+					border-bottom: 1px solid #293264;
+				}
+			}
+		}
+	}
+}
